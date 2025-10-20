@@ -37,7 +37,7 @@ export default function SignupPage() {
     formData.append('fullName', fullName);
     formData.append('password', password);
     formData.append('profilePic', profilePic);
-    const res = await axios.post("https://zenvilla-server.onrender.com/user/register", formData);
+    const res = await axios.post("http://localhost:5000/user/register", formData);
     if (res.status === 200) {
       dispatch(addUser(res.data.user));
       navigate("/");

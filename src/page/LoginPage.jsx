@@ -19,7 +19,7 @@ export default function LoginPage() {
       alert('Please enter both username and password.');
       return;
     }
-    const res = await axios.post("https://zenvilla-server.onrender.com/user/login", { userName, password });
+    const res = await axios.post("http://localhost:5000/user/login", { userName, password });
     if (res.status === 200) {
       dispatch(addUser(res.data.user));
       navigate("/");

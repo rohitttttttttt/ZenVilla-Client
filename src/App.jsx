@@ -11,7 +11,7 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {addRoom , deleteRoom , replaceRooms }  from './store/roomSlice'
 import Contact from './component/Contact';
-export const socket = io("http://localhost:5000")
+export const socket = io("https://zenvilla-client.onrender.com")
 export default function App() {
   const user = useSelector((state)=>state.user)
   const room = useSelector((state)=>state.room)
