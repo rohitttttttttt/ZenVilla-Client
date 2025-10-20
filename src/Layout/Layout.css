@@ -1,0 +1,42 @@
+/* src/component/Layout.css */
+
+/* --- DESKTOP & TABLET STYLES --- */
+.app-container {
+  display: grid;
+  grid-template-columns: 200px 1fr; /* Sidebar and main content */
+}
+
+.footer-nav {
+  display: none; /* Hide footer nav on large screens */
+}
+.mainContentStyles{
+  width: calc(100vw - 230px);
+  padding: 15px;
+
+}
+
+/* --- MOBILE STYLES --- */
+/* This block applies only when the screen is 768px wide or less */
+@media (max-width: 768px) {
+  .app-container {
+    display: block; /* Stack content vertically */
+  }
+
+  .sidenav {
+    display: none; /* Hide sidebar on small screens */
+  }
+
+  .footer-nav {
+    display: flex; /* Show footer nav on small screens */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #181818;
+    border-top: 1px solid #333;
+    z-index: 1000;
+  }
+  .mainContentStyles{
+    width: 100vw;
+  }
+}

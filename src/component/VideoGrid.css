@@ -1,0 +1,23 @@
+/* --- DEFAULT (Mobile First) --- */
+/* By default, it's a single column */
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column */
+  gap: 40px;
+}
+
+/* --- TABLET & UP --- */
+/* When the screen is wider than 768px, switch to 2 columns */
+@media (min-width: 768px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  }
+}
+
+/* --- LARGE PC SCREENS --- */
+/* Optional: For very wide screens, you could go to 3 columns */
+@media (min-width: 1600px) {
+  .video-grid {
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+  }
+}

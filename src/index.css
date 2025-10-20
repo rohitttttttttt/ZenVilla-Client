@@ -1,0 +1,13 @@
+/* src/index.css */
+
+/* Import the two fonts used in your Figma design */
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap');
+
+body {
+  /* This is the main background from your 'Desktop - 1' spec */
+  background-color: #121212;
+  color: #FFFFFF;
+  margin: 0;
+  font-family: sans-serif;
+}
