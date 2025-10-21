@@ -184,12 +184,18 @@ const localStreamRef = useRef(null);
   };
  const stopLocalStream =async ()=>{
   const stream  = localVideoRef.current.srcObject
-  await stream.getTracks().forEach(track => track.stop());
+  if(stream){
+    await stream.getTracks().forEach(track => track.stop());
+  }
+  
   if (localVideoRef.current) {
     localVideoRef.current.srcObject = null;
   }
   console.log("stopped it ")
-  await pcRef.current.close()
+  if(pcRef.current){
+     await pcRef.current.close()
+  }
+ 
   console.log("stopped the rtc too ")
    pcRef.current = null
 
